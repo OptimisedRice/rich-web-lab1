@@ -1,0 +1,30 @@
+#note_container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.note {
+    display:flex;
+    margin: 1.5rem;
+    border: 1px solid black;
+    width: 10em;
+    height: 10em;
+    padding: 1em;
+    flex-wrap: wrap;
+}
+
+.note_content {
+    margin-top: 0;
+    width:100%;
+}
+
+.editButton {
+    align-self: end;
+    margin-right: 20%;
+}
+
+.delButton {
+    align-self: end;
+    margin-left: 20%;
+}
