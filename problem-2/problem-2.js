@@ -39,6 +39,30 @@ const addNote = (event) => {
 
 const editNote = (event) => {
     console.log(event);
+    let editButton = event.target;
+    editButton.firstChild.nodeValue = "Confirm";
+    editButton.removeEventListener("click", editNote)
+    editButton.addEventListener("click", confirmNote)
+    let noteText = event.target.previousSibling;
+    let noteInput = document.createElement("textarea");
+    //noteInput.setAttribute("type", "text");
+    noteInput.appendChild(document.createTextNode(noteText.firstChild.nodeValue));
+    noteText.replaceWith(noteInput);
+}
+
+const confirmNote = (event) => {
+    console.log(event);
+    let confirmButton = event.target;
+    confirmButton.firstChild.nodeValue = "Edit";
+    confirmButton.removeEventListener("click", confirmNote)
+    confirmButton.addEventListener("click", editNote)
+    let noteInput = event.target.previousSibling;
+    let test = document.createTextNode(noteInput.value)
+    let noteContent = document.createElement("p");
+    noteContent.setAttribute("class","note_content");
+    noteContent.appendChild(test);
+    console.log(noteContent);
+    noteInput.replaceWith(noteContent);
 }
 
 const delNote = (event) => {

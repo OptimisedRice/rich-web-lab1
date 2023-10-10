@@ -17,14 +17,16 @@
 .note_content {
     margin-top: 0;
     width:100%;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
 }
 
 .editButton {
     align-self: end;
-    margin-right: 20%;
+    margin-right: auto;
 }
 
 .delButton {
     align-self: end;
-    margin-left: 20%;
+    margin-left: auto;
 }
