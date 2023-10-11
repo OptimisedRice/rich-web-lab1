@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "BoogieWoogie",
+    "version": "1.0.0",
+    "content_scripts": [
+        {
+        "matches": ["<all_urls>"],
+        "js": ["Content.js"]
+        }
+    ],
+    "icons": {
+        "16": "disco.png",
+        "32": "disco.png",
+        "48": "disco.png",
+        "128": "disco.png"
+    }
+}
